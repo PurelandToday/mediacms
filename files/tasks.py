@@ -250,7 +250,7 @@ def encode_media(
         if os.path.exists(tf) and get_file_type(tf) == "image":
             with open(tf, "rb") as f:
                 myfile = File(f)
-                encoding.status = "encoded"
+                encoding.status = "success"
                 encoding.media_file.save(content=myfile, name=tf)
                 rm_file(tf)
                 return True
